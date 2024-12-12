@@ -1,0 +1,106 @@
+Using the transfer learned model (models_pfd_tlcc/pfdimer_ccsdt_TLSET4_406struc_9)
+should allow to reproduce the following numbers:
+
+Energy/force/dipole prediction of min_pfd.xyz using "./predict_mol.py -i min_pfd.xyz"
+should give (energies in eV, forces in eV per ang, dipoles in e*ang)
+
+Epot = -55.01498721358676
+F = [[ 3.30109628e-01  2.55127580e-01  2.00349175e-03]
+ [-4.21953871e-01 -7.79458914e-01 -9.09129104e-04]
+ [ 7.95437808e-02  5.21657242e-01 -1.30219740e-03]
+ [ 2.69307555e-01  1.93192834e-02 -7.45255091e-04]
+ [-1.83911617e-01 -3.23118949e-02  1.00260207e-03]
+ [-4.64151943e-01 -2.58697807e-01 -4.85043386e-04]
+ [ 4.43725293e-01  7.98399268e-01 -1.59508668e-04]
+ [-5.58595391e-02 -5.20761238e-01 -3.00921600e-04]
+ [ 1.96123848e-01  2.83492469e-02  7.44902698e-04]
+ [ 1.82931870e+00 -1.94550776e-01  5.71878814e-04]
+ [-1.67281368e+00  1.45209397e-01 -3.44457974e-04]
+ [-3.49438155e-01  1.77186121e-02 -7.63621065e-05]]
+mu = [ 1.36341865e-01 -1.99590701e-02  1.09611810e-05]
+
+
+
+
+
+The energy barrier for hydrogen transfer using the same model should be
+
+min   E = -55.0585630506 eV
+TS    E = -54.7216001617 eV
+delta E = 0.336963 eV = 7.77055 kcal/mol
+
+These require to optimize the minimum and TS structure first using optimize.py.
+The energy barriers for all 10 TL PESs are listed in table S8 of https://arxiv.org/abs/2407.21366
+
+
+The harmonic frequencies determined using NN_NM.py using the same model should be (in cm**-1)
+
+MINIMUM:
+  6     53.13 
+  7     74.95 
+  8    114.43 
+  9    178.84 
+ 10    200.54 
+ 11    211.98 
+ 12    254.85 
+ 13    277.20 
+ 14    567.61 
+ 15    600.95 
+ 16    649.61 
+ 17    694.66 
+ 18    695.93 
+ 19    766.73 
+ 20    865.34 
+ 21    954.84 
+ 22    985.85 
+ 23   1090.34 
+ 24   1249.30 
+ 25   1311.90 
+ 26   1404.48 
+ 27   1463.71 
+ 28   1495.87 
+ 29   1704.47 
+ 30   1759.74 
+ 31   2169.84 
+ 32   3097.22 
+ 33   3175.36 
+ 34   3292.27 
+ 35   3446.49 
+
+
+
+TS:
+
+  0   1317.97i
+  7     70.99 
+  8     76.86 
+  9    128.09 
+ 10    239.59 
+ 11    243.27 
+ 12    287.74 
+ 13    409.30 
+ 14    477.29 
+ 15    642.86 
+ 16    688.74 
+ 17    697.79 
+ 18    698.25 
+ 19    753.68 
+ 20    782.41 
+ 21    918.17 
+ 22   1078.16 
+ 23   1236.29 
+ 24   1329.97 
+ 25   1367.56 
+ 26   1397.96 
+ 27   1400.12 
+ 28   1443.90 
+ 29   1595.61 
+ 30   1707.69 
+ 31   1715.28 
+ 32   1743.74 
+ 33   2166.04 
+ 34   3116.00 
+ 35   3445.33 
+
+
+
